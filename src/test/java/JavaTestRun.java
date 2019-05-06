@@ -4,69 +4,31 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import PageObjects.TutorialPageObjects;
 
+
 public class JavaTestRun {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver","C:/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-
-
-
-        //Selects Click Me Button
-        driver.findElement(By.xpath(bClickMe)).click();
-
-////        //Navigate to a specific URL
-////        driver.get("https://qxf2.com/selenium-tutorial-main");
+//        String userName ="Jose Rodriguez";
+//        String userEmail = "jrodrig12@gmail.com";
+//        String userPhoneNo = "305.807.7045";
+//        char gender = 'M';
 //
-////        //Fill text fields
-////        driver.findElement(By.xpath(nameField)).sendKeys("Joey Rodriguez");
-////        driver.findElement(By.xpath(emailField)).sendKeys("jrodriguez6242@gmail.com");
-////        driver.findElement(By.xpath(phoneField)).sendKeys("305.807.7045");
+//        System.setProperty("webdriver.chrome.driver","C:/chromedriver.exe");
+//        WebDriver driver = new ChromeDriver();
 //
-////        System.out.println(driver.findElement(By.xpath("//*[@id=\"name\"]")).getAttribute("value"));
+//        SeleniumTutorialLander stl = new SeleniumTutorialLander(driver);
 //
-////        //Set a dropdown
-////        Select drpGender = new Select(driver.findElement(By.xpath(dropDownMenu)));
-////        drpGender.selectByIndex(1);
+//        //Fill text fields (fill the Example Form below)
+//        stl.testFillInTextFields(userName, userEmail, userPhoneNo);
 //
-//        //Set a ul dropdown
-//        driver.findElement(()).click();
-//        driver.findElement(By.xpath(dropDownMale)).click();
+//        //Set a dropdown
+//        stl.testSelectGender(gender);
 //
-//        //Check Terms and Conditions Box
-//        driver.findElement(By.xpath(chbTermsAndConditions)).click();
+//        //Enable/disable a checkbox
+//        stl.testClickOptCb();
 //
 //        //Identify elements without ids
-//
-//
-//        //Check for form validation messages
-//
-//        driver.findElement(By.xpath(nameField)).clear();
-//        driver.findElement(By.xpath(emailField)).clear();
-//        driver.findElement(By.xpath(phoneField)).clear();
-//
-//        //Selects Click Me Button
-//        driver.findElement(By.xpath(bClickMe)).click();
-//
-//        //verify Name, Email, and Phone No validation messages appear
-//        if(!(driver.findElement(By.xpath(tNameValidationWarning)).isDisplayed()))
-//           System.out.println("Name Validation is not displayed");
-//
-//        if(!(driver.findElement(By.xpath(tEmailValidationWarning)).isDisplayed()))
-//           System.out.println("Email Validation is not displayed");
-//
-//        if(!(driver.findElement(By.xpath(tPhoneNoValidationWarning)).isDisplayed()))
-//            System.out.println("Phone No Validation is not displayed");
-
-
-
-        //Selects Click Me Button
-        driver.findElement(By.xpath(bClickMe)).click();
-
-
-//        driver.close();
-//        driver.quit();
-
+//        stl.testSelectNameFieldByClassName();
     }
 }
