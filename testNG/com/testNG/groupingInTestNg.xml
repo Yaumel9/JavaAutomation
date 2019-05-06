@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG_Groups">
+    <test name="SanityTest">
+        <groups>
+            <run>
+                <include name="sanity" />
+            </run>
+        </groups>
+        <classes>
+            <class name="SeleniumTutorialLander" />
+        </classes>
+    </test>
+    <test name="SmokeTest">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+        <classes>
+            <class name="SeleniumTutorialLander" />
+        </classes>
+    </test>
+</suite>
