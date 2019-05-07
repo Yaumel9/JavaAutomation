@@ -15,7 +15,7 @@ public class SeleniumTutorialLander {
     WebDriver driver;
     TutorialPageObjects tpo;
 
-    @BeforeTest
+    @BeforeMethod (groups = {"sanity", "smoke"})
     public void setUp() {
         System.setProperty("webdriver.chrome.driver","C:/chromedriver.exe");
         this.driver = new ChromeDriver();
@@ -59,7 +59,7 @@ public class SeleniumTutorialLander {
     //Identify elements without ids
     public void selectNameFieldByClassName(){
         this.tpo.nameFieldC().clear();
-        this.tpo.nameFieldC().sendKeys("It works");
+        this.tpo.nameFieldC().sendKeys("It Works");
         System.out.println(this.tpo.nameFieldC().getAttribute("value"));
         assertTrue("Text does not match", this.tpo.nameFieldC().getAttribute("value").contains("It Works"));
     }
@@ -136,7 +136,7 @@ public class SeleniumTutorialLander {
     }
     }
 
-    @AfterTest
+    @AfterMethod (groups = {"sanity", "smoke"})
     void tearDown(){
         driver.close();
         driver.quit();
